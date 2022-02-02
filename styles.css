@@ -1,0 +1,238 @@
+/* - Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%) */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+p {
+  color: hsl(217, 19%, 35%);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 97vh;
+}
+
+article {
+  transform: translateY(2vh);
+  width: 730px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px 4px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 285px auto;
+}
+
+.article-img {
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.article-img img {
+  width: 350px;
+}
+.article-mainCard-wrap {
+  padding: 35px 50px 35px 35px;
+}
+
+.mainCard-footer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainCard-footer-userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mainCard-footer-userInfo img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.mainCard-footer-userInfo p {
+  margin-top: 0;
+  align-self: flex-start;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.mainCard-footer-userInfo p span {
+  color: hsl(214, 17%, 51%);
+}
+
+.buttom {
+  position: relative;
+}
+
+.buttomShare {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: transparent;
+}
+.buttomClicked {
+  background-color: #6e8098;
+}
+.buttomShare:hover {
+  cursor: pointer;
+}
+.icon {
+  color: #6e8098;
+}
+
+.shareLinks {
+  padding: 0px 35px;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 255px;
+  height: 50px;
+  background-color: hsl(217, 19%, 35%);
+  top: -75px;
+  left: -110px;
+  color: #fff;
+  transition: opacity 500ms, visibility 500ms;
+  opacity: 0;
+  visibility: hidden;
+}
+.shareLinks p {
+  margin-top: 0;
+  font-weight: 500;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 4px;
+}
+.shareLinks a {
+  margin-top: 3px;
+}
+.shareLinks::after {
+  position: absolute;
+  top: 42px;
+  left: 120px;
+  width: 15px;
+  height: 15px;
+  transform: rotateZ(45deg);
+  content: "";
+  background-color: hsl(217, 19%, 35%);
+  z-index: -1;
+}
+.showLinks {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 700px) {
+  article {
+    /* transform: translateY(2vh); */
+    width: initial;
+    max-width: 350px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto;
+  }
+  .article-mainCard-wrap {
+    padding: 30px 37px 15px 37px;
+  }
+  .article-img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+  h1 {
+    font-size: 1.1rem;
+  }
+  p {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+  .mainCard-footer {
+    padding-top: 30px;
+  }
+  .mainCard-footer-userInfo img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .buttom {
+    z-index: 1;
+  }
+  .shareLinks {
+    padding: initial;
+    padding-left: 20px;
+    padding-right: 90px;
+    position: absolute;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 65px;
+    background-color: hsl(217, 19%, 35%);
+    top: -11px;
+    left: -278px;
+    color: #fff;
+    transition: opacity 500ms, visibility 500ms;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    z-index: -1;
+  }
+  .shareLinks::after {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+}
